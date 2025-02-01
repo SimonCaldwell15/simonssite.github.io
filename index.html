@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simon's Portfolio</title>
+</head>
+<body>
+    <nav class="nav-container">
+        <h1 class="site-title">Simon's Portfolio</h1>
+        <ul class="nav-menu">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Welcome Section with Gradient -->
+        <section id="welcome" class="intro-section">
+            <div class="welcome-text">
+                <h2>Welcome to my portfolio!</h2>
+                <p>This is where I will hone my coding skills and showcase my growth. Some fun facts about me: I love playing and watching sports, gaming, and spending time outdoors.</p>
+            </div>
+        </section>
+
+        <!-- Goals Section -->
+        <section id="my_interests_and_goals" class="goals-section">
+            <h2>My Goals</h2>
+            <p>My goals include becoming more proficient in web development, improving the functionality and design of my websites, and deepening my knowledge in various aspects of computing. I aim to continue improving this portfolio and other projects as I gain more experience.</p>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume-section">
+            <div class="grid-container">
+                <!-- Resume Content -->
+                <div class="grid-item">
+                    <h3>My Resume</h3>
+                    <p>You can take a look at my resume using the button below:</p>
+                    <button id="viewResumebtn" class="resume-btn">View Resume</button>
+                    <div id="resumeContainer" style="display: none;">
+                        <iframe src="SimonCaldwellResume.pdf" width="100" height="600" style="border: dodgerblue; width: 100%; height: 600px;"></iframe>
+                    </div>
+                </div>
+
+                <!-- Image Content -->
+                <div class="grid-item image-container">
+                    <img src="images/abstract-2742886_1280.jpg" alt="Resume Image" class="resume-image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Simon Caldwell</p>
+    </footer>
+    
+    <script>
+        const viewResumebtn = document.getElementById("viewResumebtn");
+        const resumeContainer = document.getElementById("resumeContainer");
+
+        viewResumebtn.addEventListener("click", function() {
+            if (resumeContainer.style.display === "none") {
+                resumeContainer.style.display = "block"; // Shows resume
+            } else {
+                resumeContainer.style.display = "none"; // Hides resume
+            }
+        });
+    </script>
+</body>
+</html>
+
