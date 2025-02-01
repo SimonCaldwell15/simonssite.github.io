@@ -11,7 +11,7 @@
     <nav class="nav-container">
         <h1 class="site-title">Simon's Portfolio</h1>
         <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#home">Home</a></li>
             <li><a href="index.html#services">Services</a></li>
             <li><a href="skills.html">Skills</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -24,13 +24,21 @@
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <h2>Contact Me</h2>
-            <p>If you would like to reach me, please use the outlets below:</p>
-            <ul>
-                <li>Email: <a href="mailto:Simoncaldwell2001@outlook.ca">Simoncaldwell2001@outlook.ca</a></li>
-                <li>GitHub: <a href="https://GitHub.com/SimonCaldwell15" target="_blank">SimonCaldwell15</a></li>
-            </ul>
+            <p>If you would like to reach me, please use the form below:</p>
+            <form id="contact-form" method="POST" action="https://formspree.io/f/xanqjbev">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="_replyto" required>
+                <br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <br><br>
+                <input type="submit" value="Send">
+            </form>
             <div class="contact-image-container">
-                <img src="images/phone.image.jpg" alt="Contact Image" class="contact-image">
+                <img src="phone.image.jpg" alt="Contact Image" class="contact-image">
             </div>
         </section>
     </main>
@@ -39,5 +47,9 @@
     <footer>
         <p>&copy; 2024 Simon Caldwell</p>
     </footer>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="contact.js"></script>
 </body>
 </html>
+
